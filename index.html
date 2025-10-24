@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operação Renda Expressa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --background: 228 22% 9%;
+        --foreground: 210 40% 98%;
+        --card: 228 22% 12%;
+        --card-foreground: 210 40% 98%;
+        --popover: 230 35% 7%;
+        --popover-foreground: 210 40% 98%;
+        --primary: 136 81% 44%;
+        --primary-foreground: 136 81% 10%;
+        --secondary: 45 100% 51%;
+        --secondary-foreground: 45 100% 15%;
+        --muted: 230 35% 25%;
+        --muted-foreground: 220 15% 65%;
+        --accent: 230 35% 25%;
+        --accent-foreground: 210 40% 98%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 210 40% 98%;
+        --border: 230 35% 25%;
+        --input: 230 35% 25%;
+        --ring: 136 81% 44%;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: hsl(var(--background));
+        color: hsl(var(--foreground));
+      }
+
+      .font-roboto-mono {
+        font-family: 'Roboto Mono', monospace;
+      }
+      details > summary {
+        list-style: none;
+      }
+      details > summary::-webkit-details-marker {
+        display: none;
+      }
+      .faq-arrow {
+        transition: transform 0.3s ease;
+      }
+      details[open] .faq-arrow {
+        transform: rotate(45deg);
+      }
+
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+      }
+      
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      @keyframes background-pan {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+
+      .animated-gradient-bg {
+        background: linear-gradient(90deg, hsl(var(--primary) / 0.1), hsl(var(--background) / 0.1), hsl(var(--primary) / 0.1));
+        background-size: 400% 400%;
+        animation: background-pan 15s ease-in-out infinite;
+      }
+
+      .bg-grid-pattern {
+        background-image: radial-gradient(circle at 1px 1px, hsl(var(--border) / 0.5) 1px, transparent 0);
+        background-size: 2rem 2rem;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<script src="https://fast.wistia.net/player.js" async></script>
+</head>
+  <body class="bg-[hsl(var(--background))]">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
